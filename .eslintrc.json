@@ -1,0 +1,41 @@
+{
+	"env": {
+		"es2021": true,
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["prefer-arrow-functions"],
+	"extends": ["standard", "prettier"],
+	"rules": {
+		// JS
+		"no-new": "off",
+		"default-case": "off",
+		"curly": ["error", "all"],
+		"no-case-declarations": "error",
+		"arrow-body-style": ["error", "as-needed"],
+		"object-curly-newline": [
+			"error",
+			{
+				"ObjectExpression": { "multiline": true, "minProperties": 1 },
+				"ObjectPattern": { "multiline": true },
+				"ImportDeclaration": { "multiline": true },
+				"ExportDeclaration": { "multiline": true }
+			}
+		],
+
+		// Libs
+		// eslint-plugin-prefer-arrow-functions
+		"prefer-arrow-functions/prefer-arrow-functions": [
+			"error",
+			{
+				"classPropertiesAllowed": false,
+				"disallowPrototype": false,
+				"returnStyle": "unchanged",
+				"singleReturnOnly": false
+			}
+		]
+	}
+}
